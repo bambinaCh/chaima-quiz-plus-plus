@@ -32,6 +32,9 @@ $_SESSION["score"] = 0;
         echo "</div>";
         echo "</div>";
         echo " </form> ";
+
+
+        echo " <script src='js/main.js'></script> ";
         ?>
     </main>
 

@@ -33,6 +33,9 @@ $_SESSION["points-2"] = $_POST["points"];
         echo "</div>";
         echo "</div>";
         echo " </form> ";
+
+
+        echo " <script src='js/main.js'></script> ";
         ?>
     </main>
 
