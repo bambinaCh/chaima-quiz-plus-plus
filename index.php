@@ -1,10 +1,12 @@
+<?php session_start();
+session_destroy(); ?>
 <?php include 'inc/head.php' ?>
 
 <body>
     <?php include 'inc/header.php' ?>
 
     <main>
-        
+
         <div class='px-4 py-5 my-5 text-center'>
             <svg class='d-block mx-auto mb-4' stroke='currentColor' fill='currentColor' stroke-width='0' viewBox='0 0 24 24' alt='' width='72' height='57' xmlns='http://www.w3.org/2000/svg'>
                 <circle cx='4.5' cy='9.5' r='2.5'></circle>
@@ -20,11 +22,14 @@
                 <div class='col-lg-6 mx-auto'>
                     <p class='lead mb-4'>Nimm teil an der Quiz und prüfe dein Wissen!</p>
                     <div class='d-grid gap-2 d-sm-flex justify-content-sm-center'>
-                        <button type='submit' class='btn btn-outline-secondary btn-lg px-4'>QUIZ STARTEN</button>
+                        <input type="hidden" name="lastPageID" value="question-01">
+                        <input type="hidden" id="achievedPoints" name="achievedPoints">
+                        <p id="validation-warning" class="warning"></p>
+                        <button type='submit' class='btn btn-outline-dark btn-lg px-4'>QUIZ STARTEN</button>
                     </div>
                 </div>
             </form>
-
+        </div>
     </main>
 
 </body>
