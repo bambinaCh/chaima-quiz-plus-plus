@@ -1,6 +1,6 @@
 <?php
 
-include 'inx/data-collector.php';
+include 'inc/data-collector.php';
 include 'php/db.php';
 
 
