@@ -13,14 +13,14 @@ if (isset($_POST['lastQuestionIndex'])) {
     }
 }
 
-if (isset($_SESSION['questions'])) {
-    $questions = $_SESSION['questions'];
-} else {
+if (isset($_SESSION['Questions'])) {
+    $questions = $_SESSION['Questions'];
+}
+    else {
     $questions = getQuestions();
 
     $_SESSION['questions'] = $questions;
 }
-
 //call the function
 
 
@@ -49,12 +49,14 @@ if (isset($_SESSION['questions'])) {
                     <?php
                     $answers = $questions[$currentQuestionIndex]['Answers'];
                     $isMultipleChoice = $questions[$currentQuestionIndex]['isMultipleChoice'];
+                    $maxPoints = 0;
 
                     for ($i = 0; $i < count($answers); $i++) {
 
                         echo "<div class='form-check'>";
 
                         $isCorrect = $answers[$i]['IsCorrectAnswer'];
+                        $maxPoints = $maxPoints + intval($isCorrect);
 
                         if ($isMultipleChoice == 1) {
 

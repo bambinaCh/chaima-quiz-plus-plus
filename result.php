@@ -4,6 +4,7 @@ include 'inc/data-collector.php';
 include 'php/db.php';
 
 
+
 if (isset($_SESSION['achievedPointsList'])) {
     $achievedPointsList = $_SESSION['achievedPointsList'];
 } else {

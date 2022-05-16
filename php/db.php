@@ -16,7 +16,7 @@ $questions = $query->fetchAll(PDO::FETCH_ASSOC);
 
 for ($q = 0; $q < count($questions); $q++) {
     $question = $questions[$q];
-    $subQuery = $dbConnection->prepare("SELECT * from Answers where Answers.questionID=?");
+    $subQuery = $dbConnection->prepare("SELECT * from Answers where Answers.QuestionID=?");
     $subQuery->bindValue(1, $question['ID']);
     $subQuery->execute();
     $answers = $subQuery->fetchAll(PDO::FETCH_ASSOC);

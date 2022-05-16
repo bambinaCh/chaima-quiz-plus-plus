@@ -36,4 +36,9 @@ if (isset($_POST['lastQuestionIndex'])){
     $_SESSION['maxPointsList'][$questionKey] = $maxPoints;
 } 
 
+//echo "<pre>";
+//print_r($_POST);
+//print_r($_SESSION);
+//echo "</pre>";
+
 ?>
